@@ -9,9 +9,9 @@ var main = (function() {
 	* データが無ければ、初期値を設定する
 	*/
 	function loadData() {
-		var NMDataJson = localStorage.getItem('NMData');
-		var importNMListJson = localStorage.getItem('NMList');
-		var version = localStorage.getItem('Version');
+		var NMDataJson = localStorage.getItem('NMData_Pyros');
+		var importNMListJson = localStorage.getItem('NMList_Pyros');
+		var version = localStorage.getItem('Version_Pyros');
 		//データがない場合初期値設定
 		if(NMDataJson == null || importNMListJson == null) {
 			main.resetData(false);
@@ -176,8 +176,8 @@ var main = (function() {
 				console.log(e);
 				return;
 			}
-			localStorage.setItem('NMData', NMDataJson);
-			localStorage.setItem('NMList', importNMListJson);
+			localStorage.setItem('NMData_Pyros', NMDataJson);
+			localStorage.setItem('NMList_Pyros', importNMListJson);
 			alert($('#successMsg1').text());
 		},
 
@@ -217,9 +217,9 @@ var main = (function() {
 				['レウコシア\\[(..):(..)\\]','NM01'],['フラウロス\\[(..):(..)\\]','NM02'],['ソフィスト\\[(..):(..)\\]','NM03'],['グラッフアカーネ\\[(..):(..)\\]','NM04'],['アスカラポス\\[(..):(..)\\]','NM05'],['グランドデューク・バティム\\[(..):(..)\\]','NM06'],['？？？\\[(..):(..)\\]','NM07'],['？？？\\[(..):(..)\\]','NM08'],['？？？\\[(..):(..)\\]','NM09'],['？？？\\[(..):(..)\\]','NM10'],['？？？\\[(..):(..)\\]','NM11'],['？？？\\[(..):(..)\\]','NM12'],['？？？\\[(..):(..)\\]','NM13'],['？？？\\[(..):(..)\\]','NM14'],['？？？\\[(..):(..)\\]','NM15'],['？？？\\[(..):(..)\\]','NM16'],['？？？\\[(..):(..)\\]','NM17'],
 				['レウコシア:(..):(..)','NM01'],['フラウロス:(..):(..)','NM02'],['ソフィスト:(..):(..)','NM03'],['グラッフ:(..):(..)','NM04'],['アスカラポス:(..):(..)','NM05'],['バティム:(..):(..)','NM06'],['キングイグルー:(..):(..)','NM07'],['？？？:(..):(..)','NM08'],['？？？:(..):(..)','NM09'],['？？？:(..):(..)','NM10'],['？？？:(..):(..)','NM11'],['？？？:(..):(..)','NM12'],['？？？:(..):(..)','NM13'],['？？？:(..):(..)','NM14'],['？？？:(..):(..)','NM15'],['？？？:(..):(..)','NM16'],['？？？:(..):(..)','NM17']
 			];
-			localStorage.setItem('NMData', JSON.stringify(tempNMData));
-			localStorage.setItem('NMList', JSON.stringify(tempNMList));
-			localStorage.setItem('Version', $('#version').text());
+			localStorage.setItem('NMData_Pyros', JSON.stringify(tempNMData));
+			localStorage.setItem('NMList_Pyros', JSON.stringify(tempNMList));
+			localStorage.setItem('Version_Pyros', $('#version').text());
 			if(msgFlag) {
 				alert($('#successMsg2').text());
 			}
