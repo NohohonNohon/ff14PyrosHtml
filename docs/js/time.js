@@ -594,7 +594,7 @@ var time = (function() {
 
 	function getWeather(date) {
 		var weatherTime = WeatherFinder.getWeatherTimeFloor(date).getTime();
-		var weather = WeatherFinder.getWeather(weatherTime, 'Pagos');
+		var weather = WeatherFinder.getWeather(weatherTime, 'Pyros');
 		return WeatherFinder.getWeatherName(weather.id);
 	}
 
